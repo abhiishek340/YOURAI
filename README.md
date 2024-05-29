@@ -52,3 +52,4 @@ Through building Your AI, we learned a lot about how to use computers to solve b
 
 Looking ahead, we're excited to keep improving Your AI. We want to make it even smarter by giving it more info to work with and making it easier for you to use. By staying up-to-date with new tech and listening to feedback, we're confident that Your AI will continue to be a game-changer in healthcare.
 
+https://evohealth.netlify.app/
