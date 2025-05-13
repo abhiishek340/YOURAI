@@ -1,60 +1,66 @@
-# Asha: Your AI Health Companion 🤖💙
+# YourAI: Revolutionizing Healthcare with Intelligence 🤖💉
 
-Welcome to Asha, an innovative AI-powered health assistant designed to revolutionize personal healthcare management. Asha combines cutting-edge natural language processing with advanced speech recognition to offer a compassionate, intelligent, and interactive experience.
+![YourAI Banner](https://via.placeholder.com/1200x400?text=YourAI+Healthcare+Assistant)
 
-## 🌟 Key Features
+## 🎯 Vision
 
-- **Natural Conversations**: Engage in human-like dialogues for health advice and emotional support.
-- **Voice-Activated Assistance**: Hands-free interaction through advanced speech recognition.
-- **Lifelike Responses**: Hear Asha's advice with natural-sounding text-to-speech technology.
-- **Email Management**: Stay on top of your health-related correspondence effortlessly.
-- **Smart Scheduling**: Book appointments using simple voice commands.
-- **Seamless Integrations**: Connect with Google Calendar and Gmail for a unified experience.
-- **Eye-Friendly Interface**: Toggle dark mode for comfortable viewing at any time of day.
-- **Conversation Tracking**: Review your chat history for consistent care.
-- **Device Flexibility**: Access Asha on various devices with our responsive design.
+YourAI is a next-generation healthcare assistant that transforms how we interact with our health data. By leveraging cutting-edge artificial intelligence and natural language processing, we're creating a more intuitive, accessible, and personalized healthcare experience for everyone.
 
-## 🛠️ Technology Stack
+## ✨ Core Capabilities
 
-- **Frontend**: React.js with TypeScript
-- **Framework**: Next.js for optimal performance
-- **Voice Interaction**: Web Speech API
-- **AI Core**: Llama 3.1 AI Model
-- **Voice Synthesis**: Piper and WaveNet for natural speech
+### 🤝 Intelligent Interaction
+- **Natural Dialogue**: Experience human-like conversations for health guidance
+- **Voice Commands**: Control your health assistant hands-free
+- **Smart Responses**: Get clear, natural-sounding health advice
+- **Email Integration**: Manage health-related communications effortlessly
+- **Calendar Sync**: Schedule appointments with simple voice commands
 
-## 📋 Prerequisites
+### 🔄 Seamless Integration
+- **Google Workspace**: Connect with Calendar and Gmail
+- **Dark Mode**: Eye-friendly interface for all hours
+- **History Tracking**: Access your health conversations anytime
+- **Cross-Platform**: Use on any device with responsive design
 
-Before embarking on your Asha journey, ensure you have:
+## 🛠️ Technical Foundation
 
-- Node.js (v14 or later)
-- npm (v6 or later)
-- Google Cloud Platform account with active Gmail and Calendar APIs
-- OAuth 2.0 credentials for Google API integration
+### Frontend Architecture
+- **Framework**: React.js with TypeScript
+- **Performance**: Next.js optimization
+- **Voice Tech**: Web Speech API integration
+- **AI Engine**: Advanced Llama 3.1 Model
+- **Voice Generation**: Piper and WaveNet synthesis
 
-## 🚀 Getting Started
+## 🚀 Quick Start Guide
 
-Let's bring Asha to life on your local machine:
+### Prerequisites
+- Node.js (v14+)
+- npm (v6+)
+- Google Cloud Platform account
+- OAuth 2.0 credentials
 
-1. **Clone the Repository**
+### Installation Steps
+
+1. **Clone and Setup**
    ```bash
-   git clone https://github.com/your-username/asha-health-assistant.git
-   cd asha-health-assistant
+   git clone https://github.com/your-username/yourai-health.git
+   cd yourai-health
    ```
 
-2. **Install Dependencies**
+2. **Dependencies**
    ```bash
    npm install
    ```
 
-3. **Configure Environment**
-   Create a `.env.local` file in the root directory:
+3. **Environment Setup**
+   Create `.env.local`:
    ```
-   NEXT_PUBLIC_API_URL=your_api_url_here
+   NEXT_PUBLIC_API_URL=your_api_url
    ```
 
-## 🎙️ Setting Up Piper for Voice Synthesis
+## 🎙️ Voice System Setup
 
-1. **Clone and Build Piper**
+### Piper Integration
+1. **Build Process**
    ```bash
    git clone https://github.com/rhasspy/piper.git
    cd piper
@@ -63,91 +69,121 @@ Let's bring Asha to life on your local machine:
    make
    ```
 
-2. **Download Voice Model**
+2. **Model Installation**
    ```bash
    curl -L -o models/en_US-libritts-high.onnx https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/libritts/high/en_US-libritts-high.onnx
    curl -L -o models/en_US-libritts-high.onnx.json https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/libritts/high/en_US-libritts-high.onnx.json
    ```
 
-3. **Install espeak-ng**
+3. **Dependencies**
    ```bash
    brew install espeak-ng
    ```
 
-4. **Configure Piper Environment**
-   Add to your `.env.local`:
+4. **Configuration**
+   Add to `.env.local`:
    ```
-   PIPER_PATH=/path/to/your/project/piper/build/piper
-   PIPER_MODEL_PATH=/path/to/your/project/piper/models/en_US-libritts-high.onnx
+   PIPER_PATH=/path/to/piper/build/piper
+   PIPER_MODEL_PATH=/path/to/piper/models/en_US-libritts-high.onnx
    ```
 
-## 🔗 Integrating Google Services
+## 🔐 Google Integration
 
-1. **Set Up Google OAuth 2.0**
-   - Navigate to the Google Cloud Console
-   - Create or select a project
-   - Enable Gmail and Google Calendar APIs
-   - Generate OAuth 2.0 credentials for web application
-   - Configure authorized origins and redirect URIs
+### OAuth Setup
+1. **Google Cloud Console**
+   - Create/select project
+   - Enable APIs
+   - Generate credentials
+   - Configure URIs
 
-2. **Configure API Scopes**
-   Ensure your OAuth consent screen includes:
+2. **API Permissions**
+   Required scopes:
    - `https://www.googleapis.com/auth/gmail.readonly`
    - `https://www.googleapis.com/auth/calendar.events`
 
-3. **Add Google Credentials**
-   Update `.env.local` with:
+3. **Environment Variables**
    ```
-   NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id
-   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_client_id
+   GOOGLE_CLIENT_SECRET=your_client_secret
    ```
 
-## 🗣️ Conversing with Asha
+## 💬 Using YourAI
 
-1. **Wake Asha**: Say "Hey Asha" or "Hello" to begin.
+### Voice Commands
+- **Activation**: "Hey YourAI" or "Hello"
+- **Email**: "Check my health emails"
+- **Appointments**: "Schedule a checkup"
 
-2. **Email Management**:
-   - "Read my recent emails"
-   - "Any unread messages?"
-   - "Check for important emails"
+## 🧠 System Architecture
 
-3. **Appointment Scheduling**:
-   - "Book a doctor's appointment for tomorrow at 2 PM"
-   - "Schedule a health checkup for next Monday morning"
+### Dual-Thread Processing
+1. **Text Processing**
+   - AI responses
+   - User input handling
+   - Conversation management
 
-## 🧠 Under the Hood: Multi-threading
+2. **Audio Processing**
+   - Speech recognition
+   - Voice synthesis
+   - Audio playback
 
-Asha operates on two primary threads for optimal performance:
+## 🎓 Custom Voice Training
 
-1. **Text Processing Thread**: Manages AI responses, user inputs, and conversation history.
-2. **Audio Processing Thread**: Handles speech recognition, text-to-speech conversion, and audio playback.
+### Model Development
+1. **Data Collection**: `audio_download_create_wav_files.py`
+2. **Data Processing**: `process_wav_files_to_remove_wav_errors.py`
+3. **Transcription**: `transcript.py` with Whisper
+4. **Training**: Custom voice model creation
 
-This parallel processing ensures smooth interactions and swift response times.
-
-## 🎓 Training Custom Voice Models
-
-Enhance Asha's voice with personalized models:
-
-1. **Data Collection**: Utilize `audio_download_create_wav_files.py` for audio processing.
-2. **Data Cleaning**: Run `process_wav_files_to_remove_wav_errors.py` for WAV file validation.
-3. **Transcription**: Employ `transcript.py` with the Whisper model for accurate transcriptions.
-4. **Model Training**: Use processed audio and transcripts to train your custom voice model.
-
-For an in-depth guide, refer to our [Colab training notebook](https://colab.research.google.com/github/rmcpantoja/piper/blob/master/notebooks/piper_multilingual_training_notebook.ipynb).
+[Training Guide](https://colab.research.google.com/github/rmcpantoja/piper/blob/master/notebooks/piper_multilingual_training_notebook.ipynb)
 
 ## 💻 Development
 
-Launch Asha in development mode:
 ```bash
 npm run dev
 ```
 
 ## 🤝 Contributing
 
-We welcome contributions to make Asha even better:
+Join our mission to transform healthcare:
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+## 🌟 About YourAI
+
+YourAI represents a paradigm shift in healthcare technology. Our mission is to empower healthcare professionals and patients alike through advanced AI capabilities. By analyzing vast amounts of health data and extracting meaningful insights, we're revolutionizing personal health record management.
+
+### Impact Areas
+- **Data Centralization**: Unified health records
+- **Insurance Optimization**: Streamlined processes
+- **Medication Management**: Enhanced administration
+- **Personalized Care**: Custom health guidance
+- **Privacy Protection**: Advanced security measures
+- **Hospital Integration**: Seamless communication
+- **Insurance Interface**: User-friendly management
+- **Secure Access**: Protected data handling
+- **Health Monitoring**: Continuous tracking
+
+### Project Origins
+Developed during the Princeton University Hackathon, YourAI emerged from a team of three innovators dedicated to solving healthcare challenges. Our solution combines cutting-edge technology with user-centric design to make healthcare more accessible.
+
+### Technical Excellence
+Built on React and Node.js, YourAI implements robust security measures and efficient data handling protocols, ensuring the highest standards of privacy and performance.
+
+### Future Roadmap
+- **Technology Integration**: Emerging tech adoption
+- **UX Enhancement**: Improved user experience
+- **Solution Expansion**: Broader health services
+- **AI Advancement**: Enhanced capabilities
+- **Security Reinforcement**: Stronger protection
+
+---
+
+<div align="center">
+  <h3>Join the Healthcare Revolution</h3>
+  <p>YourAI is transforming healthcare, one interaction at a time.</p>
+</div>
