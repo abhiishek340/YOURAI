@@ -56,7 +56,7 @@ class AuthController {
             // return res.status(200).json({message: "Login Successful"})
 
             //Generate token for protected link access
-            const token = jwt.sign({ userID: isEmail._id }, "pleaseSubscribe", {
+            const token = jwt.sign({ userID: isEmail._id }, process.env.JWT_SECRET, {
               expiresIn: "2d",
             });
 
