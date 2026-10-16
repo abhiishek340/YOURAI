@@ -12,7 +12,7 @@ import {
     TypingIndicator
 } from '@chatscope/chat-ui-kit-react';
 
-const API_KEY = "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";
+const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 const HealthAI = () => {
     const [responseapi, setResponseapi] = useState("");

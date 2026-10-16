@@ -23,7 +23,7 @@ function Dashboard() {
     const [sleepDurationData, setSleepDurationData] = useState([]);
     const [bloodPressureData, setBloodPressureData] = useState([]);
     const [response, setResponse] = useState("")
-    const API_KEY = "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";
+    const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
     const response_format = `Your health is below average today. Your blood pressure is high, and their heartbeat is slightly elevated. Nutrition levels are low, indicating potential dietary deficiencies. Your sleep cycle is below average, possibly affecting overall well-being. The calories burned are also lower than usual, suggesting a need for increased physical activity or dietary adjustments to improve health.
   
   In contrast, You enjoy above-average health today. Your blood pressure is normal, accompanied by a strong and steady heartbeat. Nutrition levels are high, reflecting a balanced and nourishing diet. Your sleep cycle is excellent, contributing to overall well-being. The calories burned are above average, indicating good metabolic activity and potential improvements in fitness.

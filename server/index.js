@@ -14,12 +14,12 @@ const port = 5000;
 dotenv.config();
 connectToMongo();
 
-// Replace 'YOUR_CLIENT_ID' and 'YOUR_CLIENT_SECRET' with your actual credentials obtained from Google Cloud Console.
+// Google OAuth credentials are read from server/.env (see server/.env.example).
 const SCOPES = ['https://www.googleapis.com/auth/fitness.activity.read'];
 
-const CLIENT_ID = '46994919186-0su2f9i2v6q74h2onu1ftmm65rg78gq4.apps.googleusercontent.com';
-const CLIENT_SECRET = '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';
-const REDIRECT_URI = 'http://localhost:3000/oauth2callback';
+const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+const REDIRECT_URI = process.env.GOOGLE_REDIRECT_URI;
 
 
 // Create an OAuth 2.0 client with the given credentials
